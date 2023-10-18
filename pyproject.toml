@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "adversarial-xss"
+version = "0.1.0"
+description = ""
+authors = ["Pasini Samuele"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = ">=3.9,<3.13"
+openai = "^0.28.1"
+numpy = "^1.26.0"
+pyscopus = "^1.0.3"
+pandas = "^2.1.1"
+python-dotenv = "^1.0.0"
+ipykernel = "^6.25.2"
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
