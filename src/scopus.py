@@ -10,12 +10,12 @@ load_dotenv()
 scopus_key = os.environ.get("SCOPUS_KEY")
 
 attack_list = ["xss", "'cross site scripting'", "'cross-site scripting'"]
-task_list = ["detection", "classification", "detector"]
+task_list = ["detection", "classification", "detector", "classifier", "sanitization", "sanitizer", "sanitizing", "detecting", "classifying"]
 
 output_folder = "output"
 os.makedirs(output_folder, exist_ok=True)
 
-all_outputs = os.path.join(output_folder, "all.csv")
+all_outputs = os.path.join(output_folder, "all_v2.csv")
 
 
 attack = " OR ".join(attack_list)

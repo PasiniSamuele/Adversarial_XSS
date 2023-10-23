@@ -1,0 +1,21 @@
+title,publication_name,publication_acronym,year,doi,full_text
+ZTWeb: Cross site scripting detection based on zero trust,Computers and Security,COSE,2023,10.1016/j.cose.2023.103434,https://api.elsevier.com/content/article/eid/1-s2.0-S0167404823003449
+Splendor: Static Detection of Stored XSS in Modern Web Applications,ISSTA 2023 - Proceedings of the 32nd ACM SIGSOFT International Symposium on Software Testing and Analysis,ISSTA,2023,10.1145/3597926.3598116,
+Combinatorial Methods for HTML Sanitizer Security Testing,"Proceedings - 2023 IEEE 16th International Conference on Software Testing, Verification and Validation Workshops, ICSTW 2023",ICST,2023,10.1109/ICSTW58534.2023.00051,
+MFXSS: An effective XSS vulnerability detection method in JavaScript based on multi-feature model,Computers and Security,COSE,2023,10.1016/j.cose.2022.103015,https://api.elsevier.com/content/article/eid/1-s2.0-S0167404822004072
+Cross-site scripting detection with two-channel feature fusion embedded in self-attention mechanism,Computers and Security,COSE,2023,10.1016/j.cose.2022.102990,https://api.elsevier.com/content/article/eid/1-s2.0-S0167404822003820
+TChecker: Precise Static Inter-Procedural Analysis for Detecting Taint-Style Vulnerabilities in PHP Applications,Proceedings of the ACM Conference on Computer and Communications Security,CCS,2022,10.1145/3548606.3559391,
+XSS adversarial example attacks based on deep reinforcement learning,Computers and Security,COSE,2022,10.1016/j.cose.2022.102831,https://api.elsevier.com/content/article/eid/1-s2.0-S0167404822002255
+GraphXSS: An efficient XSS payload detection approach based on graph convolutional network,Computers and Security,COSE,2022,10.1016/j.cose.2021.102597,https://api.elsevier.com/content/article/eid/1-s2.0-S016740482100420X
+Black-box adversarial attacks on XSS attack detection model,Computers and Security,COSE,2022,10.1016/j.cose.2021.102554,https://api.elsevier.com/content/article/eid/1-s2.0-S0167404821003783
+FUZZORIGIN: Detecting UXSS vulnerabilities in Browsers through Origin Fuzzing,"Proceedings of the 31st USENIX Security Symposium, Security 2022",USENIX,2022,,
+"Out of Sight, out of Mind: Detecting Orphaned Web Pages at Internet-Scale",Proceedings of the ACM Conference on Computer and Communications Security,CCS,2021,10.1145/3460120.3485367,
+DoubleX: Statically Detecting Vulnerable Data Flows in Browser Extensions at Scale,Proceedings of the ACM Conference on Computer and Communications Security,CCS,2021,10.1145/3460120.3484745,
+Black widow: Blackbox data-driven web scanning,Proceedings - IEEE Symposium on Security and Privacy,S&P,2021,10.1109/SP40001.2021.00022,
+"Towards a lightweight, hybrid approach for detecting DOM XSS vulnerabilities with machine learning","The Web Conference 2021 - Proceedings of the World Wide Web Conference, WWW 2021",WWW,2021,10.1145/3442381.3450062,
+Machine Learning Cyberattack and Defense Strategies,Computers and Security,COSE,2020,10.1016/j.cose.2020.101738,https://api.elsevier.com/content/article/eid/1-s2.0-S0167404818309799
+An ensemble learning approach for XSS attack detection with domain knowledge and threat intelligence,Computers and Security,COSE,2019,10.1016/j.cose.2018.12.016,https://api.elsevier.com/content/article/eid/1-s2.0-S0167404818306370
+Practical combinatorial testing for XSS detection using locally optimized attack models,"Proceedings - 2019 IEEE 12th International Conference on Software Testing, Verification and Validation Workshops, ICSTW 2019",ICST,2019,10.1109/ICSTW.2019.00040,
+Locate-then-DetecT: Real-time web attack detection via attention-based deep neural networks,IJCAI International Joint Conference on Artificial Intelligence,IJCAI,2019,10.24963/ijcai.2019/656,
+Code-Reuse attacks for theweb: Breaking cross-site scripting mitigations via script gadgets,Proceedings of the ACM Conference on Computer and Communications Security,CCS,2017,10.1145/3133956.3134091,
+Game of detections: how are security vulnerabilities discovered in the wild?,Empirical Software Engineering,ESE,2016,10.1007/s10664-015-9403-7,
