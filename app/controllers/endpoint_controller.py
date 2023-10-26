@@ -15,3 +15,11 @@ router = APIRouter()
 async def vuln_request(request: Request,params:BasicRequest):
     template = await payload_service.generate_content_from_payload(params.payload, request, request.app.package["templates"])
     return template
+
+@router.get(
+    "/{payload}",
+    status_code = status.HTTP_200_OK
+)
+async def vuln_request(request: Request,payload:str):
+    template = await payload_service.generate_content_from_payload([payload], request, request.app.package["templates"])
+    return template
