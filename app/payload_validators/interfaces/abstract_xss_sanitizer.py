@@ -1,5 +1,6 @@
-from payload_validator_interface import PayloadValidatorInterface
 from abc import abstractmethod
+
+from app.payload_validators.interfaces.payload_validator_interface import PayloadValidatorInterface
 
 
 #The sanitizer does not perform any detection

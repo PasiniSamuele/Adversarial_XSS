@@ -1,9 +1,11 @@
 from abc import ABC, abstractmethod
+from typing import Tuple
 
 class PayloadValidatorInterface(ABC):
     '''
         This interface exposes the methods to validate the payloads
     '''
+
     @abstractmethod
     def detect_valid_payload(self, payload:str)-> bool:
         """
@@ -28,7 +30,7 @@ class PayloadValidatorInterface(ABC):
     
     @abstractmethod
     def sanitize_payload(self,payload:str)->str:
-        """
+        """ 
         This methods, given a specified payload, analyzes it and sanitizes it
 
         Parameters
@@ -47,6 +49,10 @@ class PayloadValidatorInterface(ABC):
             The method is not implemented
         """
         raise NotImplementedError
+    
+    def validate(self,payload:str) -> Tuple[bool, str]:
+        sanitized = self.sanitize_payload(payload)
+        return self.detect_valid_payload(sanitized), sanitized
 
 
 

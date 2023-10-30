@@ -1,3 +1,4 @@
+from contextlib import asynccontextmanager
 import os
 from fastapi import FastAPI, Depends, HTTPException, status, Security
 from app.config import Settings
@@ -10,23 +11,32 @@ from pathlib import Path
 
 from fastapi.templating import Jinja2Templates
 
+from app.payload_validators.utils.validator_selector import ValidatorSelector
+
 settings = Settings()
 
+
+@asynccontextmanager
+async def lifespan(app: FastAPI):
+    BASE_DIR = Path(__file__).resolve().parent
+    templates = Jinja2Templates(directory=str(Path(BASE_DIR, 'templates')))
+    validator_selector = ValidatorSelector()
+    validator = settings.validator
+    
+    app.package = {
+        "templates":templates,
+        "validator":validator_selector.select(validator)
+    }
+    yield
+    
 app = FastAPI(
     title="StreetView - API backend",
     description=description,
     version=settings.api_prefix,
+    lifespan=lifespan
 )
 api_prefix = settings.api_prefix
 
-@app.on_event('startup')
-async def startup_event():
-    BASE_DIR = Path(__file__).resolve().parent
-    templates = Jinja2Templates(directory=str(Path(BASE_DIR, 'templates')))
-    #templates = Jinja2Templates(directory="templates")
-    app.package = {
-        "templates":templates,
-    }
 
 app.add_middleware(GZipMiddleware, minimum_size=500)
 app.add_middleware(
@@ -41,8 +51,5 @@ app.include_router(
     endpoint_controller.router,
     prefix=f"/{api_prefix}/endpoint",
     tags=['endpoint'],
-    # dependencies=[Security(get_current_active_user, scopes=["admin"])],
 )
-#app.mount("/static", StaticFiles(directory="static"), name="static")
 
-#templates = Jinja2Templates(directory="templates")
