@@ -9,13 +9,15 @@ load_dotenv()
 
 scopus_key = os.environ.get("SCOPUS_KEY")
 
-attack_list = ["xss", "'cross site scripting'", "'cross-site scripting'"]
-task_list = ["detection", "classification", "detector", "classifier", "sanitization", "sanitizer", "sanitizing", "detecting", "classifying"]
-
-output_folder = "output"
+attack_list = ["'code completion'", "'code completing'", "'code generation'", "'code generating'", "'code recommender'", 
+               "'code recommending'", "'code recommendation'"]
+task_list = ["poison", "poisoning", "backdoor", "backdooring", "altering", "alteration", "trigger", "triggering"]
+#attack_list = ["code"]
+#task_list = ["generation"]
+output_folder = "output_code_generation"
 os.makedirs(output_folder, exist_ok=True)
 
-all_outputs = os.path.join(output_folder, "all_v2.csv")
+all_outputs = os.path.join(output_folder, "all.csv")
 
 
 attack = " OR ".join(attack_list)
@@ -25,7 +27,7 @@ print(query)
 
 scopus = Scopus(scopus_key)
 
-search_df = scopus.search(query, count=99999)
+search_df = scopus.search(query, count=9999)
 
 print(f"Found {len(search_df)} papers")
 
