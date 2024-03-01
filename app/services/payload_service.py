@@ -1,3 +1,5 @@
+import html
+
 from app.exceptions.xss_exception import XSSException
 
 async def generate_content_from_payload(params, request, templates, validator):
@@ -7,8 +9,8 @@ async def generate_content_from_payload(params, request, templates, validator):
 
     for param in params:
         valid, sanitized = validator.validate(param)
-        print("Non-sanitized", param)
-        print("Sanitized", sanitized)
+        # print("Non-sanitized", param)
+        sanitized = html.unescape(sanitized)
         if not valid:
             raise XSSException()
         sanitized_els.append(sanitized)
